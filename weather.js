@@ -62,11 +62,15 @@ const getWeatherDataFromApi=async ()=>{
             );
             //--
           if (filteredArray.length > 0) {
+            //----------
             message.innerText = `You already know the weather for ${name}, Please search for another city 😉`;
+            //----------
             setTimeout(() => {
                 message.innerText = "";
             }, 5000);
+            //--
             form.reset();
+            //--
             return;
           }
         }
@@ -93,11 +97,14 @@ const getWeatherDataFromApi=async ()=>{
     
         //Capturing
         createdLi.addEventListener("click", (e)=>{
+            //--
             if(e.target.tagName == "IMG"){
+                //--
                 e.target.src = (e.target.src == iconUrl) ? iconUrlAWS : iconUrl;
+                //--
             }
         });
-    
+        //--------------------------------------------------------------------------
         //Bubbling
         // createdLi.addEventListener("click", (e)=>{
         //     alert(`LI element is clicked!!`);
@@ -105,13 +112,19 @@ const getWeatherDataFromApi=async ()=>{
         // });
         // createdLi.querySelector("figure").addEventListener("click", (e)=>{
         //     alert(`FIGURE element is clicked!!`);
+        //---------------------------------------------------------------------------
+
       } catch (error) {
         console.log(error);
+        //--
         message.innerText = `404 (City Not Found)`;
+        //--
         setTimeout(() => {
           message.innerText = "";
         }, 5000);
+        //--
       }
+      //----
       form.reset();
-
+      //----
 };
