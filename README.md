@@ -1,12 +1,10 @@
-
 # Project : Weather_Condition_App 
-
 ## Description
 Project aims to display current weather data of searched city around the world with fetching Weather Api data.
 
 ![Form](weather_app.gif)
 
-User story;
+## User story
 
   - User can search city around the world.
   - The app can fetch api with the searched city name(... and apikey if it is obligatory).
